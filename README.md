@@ -1,5 +1,8 @@
 # Vim-Config
-My vim config files
+This is my very simply vim config, There isn't much to it, I didn't just want to take someone elses
+config so I am just adding as I go.
+
+if it fails let me know.
 
 
 ## Installation

@@ -13,46 +13,49 @@ set autoindent
 
 set showcmd
 
-"tab width"
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
-set noet
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"tab Settings"
+set tabstop=4 				"Tab with of 4
+set softtabstop=0 
+set expandtab 
+set shiftwidth=4 			"Uses shift width instead of tabstop
+set smarttab
+set noet					"When inserting text Don't expand tab to spaces
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Display of space in vim editor"
 set list
-set listchars=tab:\ ·,eol:¬
-set listchars+=trail:·
+set listchars=tab:\ ·,eol:¬	"when there is a tab display dot
+set listchars+=trail:·		"after the current line display dot
 set listchars+=extends:»
 set listchars+=precedes:«
 set listchars+=nbsp:⣿
 
 
-set showmatch                 " Show matching brackets.
-set matchtime=2               " Bracket blinking.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Brackets highlighting / bracket autocomplete"
+set showmatch				 " Show matching brackets.
+set matchtime=2 			 " Bracket blinking.
 
-inoremap { {<CR>}<Esc>ko
+inoremap { {<CR>}<Esc>k
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>i
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search Options
-"
-" Ignore case when searching
-set ignorecase
+set ignorecase			"Ignore case when searching
 
-" When searching try to be smart about cases
-set smartcase
+set smartcase			"When searching try to be smart about cases
 
-" Makes search act like search in modern browsers
-set incsearch
+set incsearch			"Makes search act like search in modern browser
 
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
+set lazyredraw			"Don't redraw while executing macros
 
-" For regular expressions turn magic on
-set magic
+set magic				"For regular expressions turn magic on
 
-" Highlights all search hits
-set hlsearch
+set hlsearch			"Highlights all search hits
 
 " Toggle search highlighting
 nnoremap <F3> :set hlsearch!<CR>
