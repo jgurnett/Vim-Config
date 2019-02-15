@@ -38,7 +38,7 @@ set listchars+=nbsp:⣿
 set showmatch				 " Show matching brackets.
 set matchtime=2 			 " Bracket blinking.
 
-inoremap { {<CR>}<Esc>k
+inoremap { {<CR>}<Esc>ko
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>i
 
