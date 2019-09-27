@@ -1,6 +1,15 @@
 syntax enable
 colorscheme slate
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Pluggins
 call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'dense-analysis/ale'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+call plug#end()
 
 "auto complete"
 set nocp
@@ -10,10 +19,11 @@ set nocp
 set nu						"numbers along the side
 set ruler
 set autoindent
-set showcmd					"show command in bottom bar
+"set showcmd					"show command in bottom bar
 set cursorline				"highlight current line
 set wildmenu            	"visual autocomplete for command menu
 nnoremap gV `[v`] 			"highlight last inserted text
+map ; :Files<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,6 +81,7 @@ nnoremap E $
 " $/^ doesn't do anything
 nnoremap $ <nop>
 nnoremap ^ <nop>
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,3 +153,19 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal shiftwidth=2
     autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin configuration
+
+" lightline
+set laststatus=2
+set noshowmode
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ }
+
+" Nerd tree
+map <C-o> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
