@@ -51,7 +51,7 @@ set listchars+=nbsp:⣿
 set showmatch				 " Show matching brackets.
 set matchtime=2 			 " Bracket blinking.
 
-inoremap {<CR> {<CR>}<Esc>ko<tab>
+inoremap {<CR> {<CR>}<Esc>ko
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>i
 
@@ -131,8 +131,8 @@ set foldlevel=2
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
-                \:call <SID>StripTrailingWhitespaces()
+    "autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
+    "            \:call <SID>StripTrailingWhitespaces()
     autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
     autocmd FileType java setlocal listchars=tab:+\ ,eol:-
@@ -146,6 +146,9 @@ augroup configgroup
     autocmd FileType ruby setlocal softtabstop=2
     autocmd FileType ruby setlocal commentstring=#\ %s
     autocmd FileType python setlocal commentstring=#\ %s
+	autocmd FileType python setlocal noexpandtab
+	autocmd FileType python setlocal tabstop=4
+	autocmd FileType python setlocal shiftwidth=4
     autocmd BufEnter *.cls setlocal filetype=java
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
