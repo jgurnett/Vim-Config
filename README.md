@@ -13,7 +13,3 @@ if it fails let me know.
 4.	Give script execute permissions: `chmod +x install.sh`
 5. `./install.sh`. This creates a symbolic link called `.vimrc` in your home directory, so you are free to edit the .vimrc in this repo and your changes will be observed. It also installs all the plugins using `vim-plug` (https://github.com/junegunn/vim-plug).
 6. Now everything is installed, and you can close all vim windows that opened
-
-
-## What it Looks Like
-![Vim Layout](https://drive.google.com/open?id=1jdIUHYuM0UhBnA-_rXGroD640lTgUlq4)
