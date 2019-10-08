@@ -16,4 +16,4 @@ if it fails let me know.
 
 
 ## What it Looks Like
-![alt text](https://drive.google.com/open?id=1jdIUHYuM0UhBnA-_rXGroD640lTgUlq4)
+![Vim Layout](https://drive.google.com/open?id=1jdIUHYuM0UhBnA-_rXGroD640lTgUlq4)
