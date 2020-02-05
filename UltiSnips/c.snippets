@@ -12,3 +12,23 @@ ${1:void} ${2:funcName}(${3:int count}) {
 	$0
 }
 endsnippet
+
+snippet comment
+/*
+	Description: 	$1
+	Variables:		${2:N/A}
+	return:			${3:N/A}
+*/$0
+endsnippet
+
+snippet func
+/*
+	Description: 	$5
+	Variables:		$3
+	return:			$4
+*/
+${1:void} ${2:funcName}(${3:int count}) {
+	$0
+	${4:return NULL}
+}
+endsnippet
